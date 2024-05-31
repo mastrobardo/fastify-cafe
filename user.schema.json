@@ -1,0 +1,29 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "$id": "user.schema.json",
+    "properties": {
+      "userId": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "email": {
+        "type": "string",
+        "format": "email"
+      },
+      "address": {
+        "oneOf": [
+          {
+            "$ref": "./residential.schema.json"
+          },
+          {
+            "$ref": "./business.schema.json"
+          }
+        ]
+      }
+    },
+    "required": ["userId", "name", "email", "address"]
+  }
+  

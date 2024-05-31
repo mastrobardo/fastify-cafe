@@ -1,0 +1,16 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "business.schema.json",
+    "type": "object",
+    "properties": {
+      "type": {
+        "type": "string",
+        "enum": ["business"]
+      },
+      "companyName": {
+        "type": "string"
+      }
+    },
+    "required": ["type", "companyName"]
+  }
+  
